@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/buycart.css" />
+		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
+	</head>
+	<body>
+<!-- 头部部分  开始    -->
+<div class="header">
+	<div class="header-out">
+		<div class="header_top w">
+			<div class="select-city l">
+				<p><span class="icon"></span></p>
+				<p class="city">
+					[
+					<span title="北京" alt="北京">北京</span>
+					]
+				</p>
+				<p class="change"><a href="javascript:void(0);">切换城市</a></p>
+			</div>
+			<div class="tabnav r">
+				<ul class="ulone">
+					<li class="l"><a href="javascript:void(0);">店铺列表</a></li>
+					<li class="l" >|</li>
+					<li class="l" ><a href="users/login.html">登陆</a></li>
+					<li class="l" >|</li>
+					<li class="l" ><a href="users/login/weixin.html">注册</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header_btm">
+		<div class="navbg w">
+			<div class="logo">
+				<p class="h1">
+					<a href="https://www.caobao.com/"></a>
+				</p>
+				<p class="line"></p>
+				<div class="header_select">
+					草包网首页
+					<span></span>
+					<div>
+						<a href="javascript:void(0);" alt="加速度">加速度</a>
+						<a href="javascript:void(0);" alt="加速度维修学院">加速度维修学院</a>
+					</div>
+				</div>
+			</div>
+			<ul>
+				<li class="now"><a href="javascript:void(0);">首页</a></li>
+				<li ><a href="javascript:void(0);">设备维修</a></li>
+				<li ><a href="javascript:void(0);">旧机回收</a></li>
+				<li ><a href="javascript:void(0);">数码商城</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--头部部分 结束    -->
+
+<!--主体部分开始-->
+<div class="contant cart">
+	<div class="navStep clearfix">
+		<p class="step">
+			<b class="on"></b>
+			<span>购物车</span>
+		</p>
+		<p class="line">
+			<b></b>
+		</p>
+		<p class="step">
+			<b></b>
+			<span>填写订单</span>
+		</p>
+		<p class="line">
+			<b></b>
+		</p>
+		<p class="step">
+			<b></b>
+			<span>完成付款</span>
+		</p>
+	</div>
+	<div class="title">
+		<ul>
+			<li class="b">&nbsp;</li>
+			<li class="prodInfo">商品信息</li>
+			<li class="color">属性</li>
+			<li class="price">单价</li>
+			<li class="number">数量</li>
+			<li class="money">小计</li>
+			<li class="option">操作</li>
+		</ul>
+	</div>
+	<form id="collect" method="post" action="buycollect.html">
+		<div class="prod">
+			<div class="cartList">
+				<div class="shop-tit">
+					<b class="coin single-all single"></b>
+					深圳市草包网络科技有限公司
+					<span class="self-sale">自营</span>
+				</div>
+				<ul data-id= "67">
+					<li class="b">
+						<b class="coin single"></b>
+					</li>
+					<li class="prodInfo">
+						<a href="https://www.caobao.com/detail/67.html" target="_blank" title="苹果7多功能手机拆机工具套装">
+							<img src="../img/goods2.jpg" title="苹果7多功能手机拆机工具套装" target="_blank"/>
+						</a>
+						<p>
+							<a href="https://www.caobao.com/detail/67.html">苹果7多功能手机拆机工具套装</a>
+						</p>
+					</li>
+			 		<li class="color">
+						<p>通用</p>
+					</li>
+					<li class="price">
+						<p>35.00</p>
+					</li>
+					<li class="number">
+						<p>
+							<b class="minus bns"></b>
+							<input type="tel" name="number" class="parent" value="0" />
+							<b class="plus bns"></b>
+						</p>
+					</li>
+					<li class="money">
+						<p>0.00</p>
+					</li>
+					<li class="option">
+						<p class="del">
+							<span>删除</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+			
+			<ul class="options">
+				<li class="b">
+					<b class="coin all"></b>
+					全选
+				</li>
+				<li class="delsome">
+					<span>删除已选商品</span>
+				</li>
+				<li class="allMoney">
+					总计：
+					<span>0.00</span>
+				</li>
+				<li class="order">
+					<input type="hidden" name="ids" value="0" />
+					<button type="button" id="pay">去结算</button>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+<!--主体部分结束-->
+
+<!--页脚部分 开始 -->
+<div class="footer">
+	<div class="f w">
+		<div class="row-fluids">
+			<div class="span7">
+				<h3>故障分类: </h3>
+				<ul >
+					<li class="nli">
+						<h4>屏幕</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/1.html" title="屏碎 显示正常">屏碎 显示正常</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="手机屏幕失灵">手机屏幕失灵</a></li>
+						</ol>
+					</li>
+					<li class="nli">
+						<h4>电池/充电/开机</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/1.html" title="续航时间不足">续航时间不足</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="手机不能开机">手机不能开机</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="不充电不联机">不充电不联机</a></li>
+						</ol>
+					</li>
+					<li class="nli">
+						<h4>按键</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/1.html" title="按开机键不能开机">按开机键不能开机</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="手机HOME键失灵">手机HOME键失灵</a></li>
+						</ol>
+					</li>
+					<li class="nli">
+						<h4>声音/震动</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/1.html" title="手机听筒没有声音">手机听筒没有声音</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="播放音乐没有声音">播放音乐没有声音</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="无法调节音量大小">无法调节音量大小</a></li>
+						</ol>
+					</li>
+					<li class="nli">
+						<h4>拍照/录像</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/1.html" title="屏碎 显示正常">屏碎 显示正常</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="手机屏幕失灵">手机屏幕失灵</a></li>
+						</ol>
+					</li>
+					<li class="nli">
+						<h4>外壳/边框</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/1.html" title="后壳磨损变形">后壳磨损变形</a></li>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="手机中框变形">手机中框变形</a></li>
+						</ol>
+					</li>
+					<li class="nli">
+						<h4>进水/主板</h4>
+						<ol>
+							<li><a target="_blank" href="https://www.caomao.com/fault/2.html" title="手机进水">手机进水</a></li>
+						</ol>
+					</li>
+					
+					
+				</ul>
+			</div>
+			<div class="span30">
+				<h4>客服热线</h4>
+				<p class="tel">400-6233-866</p>
+				<p class="supp">仅收市话费用</p>
+				<p class="workTime">(周一至周日 9:00-18:00)</p>
+			</div>
+		</div>
+		<div class="row-fluids CR">
+			<a href="https://www.caomao.com&from=lable&code=90030">
+				<img src="../img/footer.png" />
+			</a>
+			<p class="_CR">Copyright © 2016 深圳草包网络科技有限公司 版权所有 粤ICP备15009083号-1</p>
+		</div>
+	</div>
+</div>
+<!--页脚部分 结束 -->
+<!--侧边栏部分 开始 -->
+<div class="cb_sidebar">
+	<span class="open"></span>
+	<div class="cb_sidebar_bg"></div>
+	<div class="cb_sidebar_tabs">
+		<ul>
+			<li class="cbwlogo">
+				<a href="javascript:void(0);" title="草包网">
+					<i></i>
+				</a>
+			</li>
+			<li class="cart">
+				<a href="javascript:void(0);" title="购物车">
+					<span class="cart_num">0</span>
+					<i></i>
+					<p class="icon-text">购物车</p>
+				</a>
+			</li>
+			<li class="linekefu">
+				<a href="javascript:void(0);" title="在线客服">
+					<i></i>
+					<p class="icon-text">客服</p>
+				</a>
+			</li>
+			<li class="weixin">
+				<a href="javascript:void(0);">
+					<img src="../img/Android.png" class="erweima"/>
+					<i></i>
+					<p class="icon-text">微信</p>
+				</a>
+			</li>
+			<li class="app">
+				<a href="javascript:void(0);" title="APP下载">
+					<i></i>
+					<p class="icon-text">APP</p>
+					<div id="APP_code">
+						<div class="android-code">
+							<img src="../img/Android.png" />
+							<p>Android下载</p>
+						</div>
+						<div class="iphone-code">
+							<img src="../img/Android.png" />
+							<p>IOS下载</p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="weibo">
+				<a href="javascript:void(0);weibo" title="关注微博">
+					<i></i>
+					<p class="icon-text">微博</p>
+				</a>
+			</li>
+		</ul>	
+	</div>
+	<div class="scrollUp">
+		<a title="返回顶部" href="javascript:void(0);">
+			<i></i>
+		</a>
+	</div>
+</div>
+
+<!--侧边栏部分 结束 -->
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="../js/buycart.js" ></script>
+<script type="text/javascript" src="../js/sidebar.js" ></script>

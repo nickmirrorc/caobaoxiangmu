@@ -1,0 +1,190 @@
+@charset "utf-8";
+.cb_sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 50px;
+    height: 100%;
+    font-size: 14px/1.5;
+    color: #999;
+    text-align: center;   
+}
+.cb_sidebar .cb_sidebar_bg{
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #cdcdcd;
+    border-top: 0 none;
+    display: none;
+}
+.cb_sidebar_tabs{
+    position: absolute;
+    left: 0;
+    top: 0;
+    li{
+        border-top: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        width:50px;
+        background: #fff;
+        a{
+            padding:12px 0;
+            display: block;
+            color: #777!important;
+        }
+        a:hover{
+            background: #40bb8c;
+            color: #fff;
+            p{
+                color: #fff; 
+            }
+        }
+    }
+    .cbwlogo,.weibo{
+        height: auto;
+    }
+}
+.cb_sidebar_tabs li p.icon-text{
+    width:20;
+    word-break: break-all;
+    margin:0 16px;
+    line-height: 20px!important;
+}
+.cb_sidebar_tabs li a:hover i{
+    background-position:-37px -5px;
+}
+.cb_sidebar_tabs li i{
+    display:inline-block;
+    background: url(../img/slider.png) -5px -5px;
+    width:18px;
+    height: 30px;
+}
+.cb_sidebar_tabs li.cbwlogo{
+    i{
+       width: 25px;
+       height: 25px;
+       margin-top: 4px;
+       background-position: -18px -227px;
+    }   
+    a:hover i{
+        background-position:-17px -260px;
+    }
+}
+.cb_sidebar_tabs li.cart{
+    height: 110px;
+    position: relative;
+    i{
+        width: 21px;
+        height: 22px;
+        background-position: -1px -44px;
+    }
+    a:hover i{
+        background-position:-38px -44px;
+    }
+    .cart_num{
+        min-width: 12px;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        z-index: 3;
+        overflow: hidden;
+        border-radius: 7px;
+        background-color: #f44;
+        color: #fff;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        padding:1px 2px;
+        -moz-border-radius:7px;
+    }
+}
+.cb_sidebar_tabs li.linekefu{
+    i{
+        width: 20px;
+        height:21px;
+        background-position: -3px -76px;
+    }
+    a:hover i{
+        background-position: -36px -76px;
+    }
+}
+.cb_sidebar_tabs li.weixin{
+    position: relative;
+    i{
+        width: 21px;
+        height: 22px;
+        background-position: -4px -111px;
+    }
+    a:hover i{
+        background-position: -35px -111px;
+    }
+    .erweima{
+        position: absolute;
+        z-index:-1;
+        left: 51px;
+        //right: 51px;
+        top: -30px;
+        width: 150px;
+    }
+}
+.cb_sidebar_tabs li.app{
+    position: relative;
+    #APP_code{
+        position: absolute;
+        top: -30px;
+        left: 51px;
+        z-index:-1;
+        //right:51px;
+        width: 340px;
+        padding:9px;
+        background: #fff;
+        border: 1px solid #eee;
+        p{
+            color: #313131;
+        }
+        img{
+            width: 150px;
+        }
+        .iphone-code,.android-code{
+            float: left;
+        }
+        .android-code{
+            margin-right:20px;
+        }
+    }
+}
+.cb_sidebar_tabs li.weibo{
+    i{
+        width: 23px;
+        height:16px;
+        background-position: -4px -148px;
+    }
+    a:hover i{
+        background-position:-33px -148px;
+    }
+}
+.scrollUp{
+    width: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    a{
+        display: block;
+        padding: 10px 0;
+    }
+    a:hover{
+        background-color: #40bb8c;
+        color: #fff;
+        i{
+            background-position: -37px -181px;
+        }
+    }
+    i{
+        width: 15px;
+        height: 21px;
+        display: inline-block;
+        background:url(../img/slider.png) -7px -181px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	</head>
+	<body>
+		<div class="header-bar">
+			<div class="header-nav w">
+				<div class="logo l">
+					<a href="../index.html"></a>
+				</div>
+				<ul class="nav r">
+					<li class="nav_1"><a href="../html/repair.html">设备维修</a></li>
+					<li class="nav_2"><a href="../html/recover.html">旧机回收</a></li>
+					<li class="nav_3"><a href="../html/product.html">草包商城</a></li>
+					<li class="nav_4"><a href="../html/video.html">维修师频</a></li>
+					<li class="nav_5"><a href="../html/wenda.html">问题解答</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			<img src="../img/login-body.jpg" alt="草包网" />
+			<div class="Login w">
+				<div class="Login-body">
+					<h1>
+						会员登录
+						<a href="login/weixin.html" title="微信扫码注册">
+							注册
+							<i></i>
+						</a>
+					</h1>
+					<div class="content">
+						<div>
+							<p>草包网账号/手机号码/电子邮箱</p>
+							<p class="textInput input">
+								<i></i>
+								<input type="text" name="username" />
+							</p>
+						</div>
+						<div>
+							<p>密码</p>
+							<p class="passInput input">
+								<i></i>
+								<input type="password" name="userpass" />
+							</p>
+						</div>
+						<div class="remember">
+							<a href="users/forget.html">忘记密码</a>
+						</div>
+						<button id="TencentCaptcha" data-cbfn="callback" type="button">登录</button>
+					</div>
+					<div class="Login_extinfo">
+						<p>合作网站账号登录</p>
+						<a href="login/weixin.html"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footbg">
+			<div class="footbg_w w">
+				<p>Copyright © 2015-2016 草包网 caobao.com 深圳市草包网络科技有限公司 版权所有 粤ICP备15009083号-1  </p>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(function(){
+//	window.callback=function(res){
+//		
+//	}
+$("#TencentCaptcha").mousedown(function(){
+//	$(".footbg").add("<div class='masking'></div>");
+//	$(".masking").css({
+//		"width":window.cline,
+//	})
+$("body").css({"background-color":"#000"}).fadeTo(200,0.2);
+
+})
+
+})
+</script>

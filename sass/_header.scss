@@ -1,0 +1,126 @@
+/*-----------------头部部分 开始-------------------- */
+.header{
+    background: #fff;
+}
+
+.header-out{
+    height: 44px;
+    background: #fff;
+}
+.header_top{
+    height: 44px;
+    line-height: 44px;
+}
+.header .select-city{
+    display: inline-block;
+}
+.select-city p{
+    display: inline-block;
+}
+.select-city p .icon{
+    display: inline-block;
+    width: 20px;
+    height: 28px;
+    background:url(../img/icon.jpg);
+    position:relative;
+    top:13px;
+}
+.tabnav{
+    display: inline-block;
+    height: 44px;
+}
+.tabnav .ulone{
+    height: 44px;
+}
+.tabnav .ulone .l{
+    padding: 0 10px;
+    
+}
+/*--------------header_btm*/
+.header_btm{
+    border-top: 1px solid #ccc;
+    height: 100px;
+}
+.header_btm .navbg{
+    height:100px;
+//  ul li:hover a{
+//      color:#40bb8c;
+//  }
+}
+.navbg .logo{
+    display: inline-block;
+    height:100%;
+    float: left;
+    margin-right: 50px;
+}
+.navbg .logo p{
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbg .logo p.h1{
+    width: 140px;
+    height: 50px;
+    margin:25px 0 ;
+    background: url(../img/logo_caobao.png) 0 0  no-repeat;
+}
+.navbg .logo .line{
+    width: 1px;
+    height: 30px;
+    margin:35px 0;
+    background:#ccc ;
+}
+.header_select{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    display: inline-block;
+}
+.header_select>span{
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    margin-left: 20px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #999 #fff #fff #fff;
+    transition: all .3s;
+}
+.header_select>div{
+    position:absolute;
+    left: -10px;
+    top:40px;
+    height: 0;
+    line-height: 20px;
+    overflow: hidden;
+    width:120px;
+    box-shadow:0 0 10px #ccc;
+    border-radius: 2px;
+    background: #fff;
+    z-index: 100;
+    transition: height .5s;
+    -moz-transition: height .5s;
+    -webkit-transition: height .5s;
+    -o-transition: height .5s;
+}
+.header_select>div a{
+    display: block;
+    margin-left: 10px;
+    padding-top:10px;
+    color: #777;
+}
+.header_btm ul li{
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    width: 160px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header_btm ul li a{
+    color: #333;
+}
+.header_btm ul li.now a{
+    color:#009944;
+}
