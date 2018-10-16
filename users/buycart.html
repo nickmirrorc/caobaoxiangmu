@@ -59,7 +59,7 @@
 <!--头部部分 结束    -->
 
 <!--主体部分开始-->
-<div class="contant cart">
+<div class="content cart w">
 	<div class="navStep clearfix">
 		<p class="step">
 			<b class="on"></b>
@@ -92,7 +92,11 @@
 		</ul>
 	</div>
 	<form id="collect" method="post" action="buycollect.html">
-		<div class="prod">
+		<div class="prod w">
+			<div class="kong">
+				购物车空了！去挑选点什么吧！
+				<a href="../html/product.html">走起！</a>
+			</div>
 			<div class="cartList">
 				<div class="shop-tit">
 					<b class="coin single-all single"></b>
@@ -302,3 +306,43 @@
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="../js/buycart.js" ></script>
 <script type="text/javascript" src="../js/sidebar.js" ></script>
+<script type="text/javascript">
+//页面加载时调用
+$(function(){
+$(".prod b.all").trigger("click");
+if($('.prod .b .ok:not(.all)').length==0){
+	$('.prod b.coin').removeClass(".ok");//复选框 取消 选中
+	$('.prod .allMoney span').text("0.00");//总金额清零
+};
+//去结算
+$("#pay").click(function(){
+	//获取选中的商品ID去结算
+	var ids;
+	var checked = $('.prod b.ok:not(.all)').parents('ul');
+	var ckdlen = checked.length;
+	for(var i=0;i<ckdlen;i++){
+		if((i+1)==ckdlen){
+			if(ids=='' || ids==null){
+				ids = $(cheched[i]).attr('data-id');
+			}else{
+				ids=ids+$(checked[i]).attr('data-id');
+			}
+		}else{
+			if(i==0){
+				ids=$(checked[i]).attr('data-id')+",";
+			}else{
+				ids = ids+$(checked[i]).attr('data-id')+",";
+			}
+		}
+	}
+	if(ids){
+		$("input[name=ids]").val(ids);
+		$("form#collect").submit();
+	}else{
+		var txt = "请选择要提交的商品！";
+		window.wxc.xcConfirm(txt,window.wxc.xcConfirm.typeEnum.warning);
+	}
+});
+})
+</script>
+	

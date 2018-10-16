@@ -2,6 +2,405 @@
 @import "base";
 @import "header";
 @import "footer";
+.content{
+    margin: 0 auto;
+}
+.navStep{
+    text-align: center;
+    margin: 20px 0 35px;
+    p{
+        display: inline-block;
+        margin: -2px;
+        position: relative;
+        span{
+            display: block;
+            width: 80px;
+            position: absolute;
+            bottom: -22px;
+            left: -34px;
+           text-align: center;
+        }
+    }
+    p.step{
+            b{
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                background: url(../img/coins.png) -208px -181px no-repeat;
+                vertical-align:-4px;
+            }
+            b.on{
+                background-position:-258px -181px;
+            }
+    }
+    p.line{
+        b{
+            display: inline-block;
+            width: 160px;
+            height: 2px;
+            background: #969696;
+            vertical-align: 1px;
+        }
+        b.on{
+            background: #3fb88c;
+        }
+    }
+}
+.title{
+    background: #3fb88c;
+    //overflow: hidden;
+    ul{
+       overflow: hidden;
+    }
+    li{
+        float: left;
+        font-size: 14px;
+        color: #fff;
+        line-height: 2.4;
+        text-align: center;
+    }
+}
+//class名为.coin、.ok的公共样式
+b.coin{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left:25px ;
+}
+
+b.ok{
+    background: url(../img/coins.png) -299px -178px no-repeat;
+}
+
+.prod{
+    .shop-tit{
+        margin: 20px 0 15px;
+        color: #000;
+        b.coin{
+            @extend b.coin;
+            margin: -2px 5px 0 25px;
+            vertical-align: middle;
+        }
+        .self-sale{
+            display: inline-block;
+            width:32px;
+            height: 16px;
+            background: #40bb8c;
+            line-height: 16px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+            margin-left: 2px;
+        }
+    }
+    ul{
+        border: 1px solid #dfdfdf;
+        margin-bottom: 6px;
+        background: #fff;
+        overflow: hidden;
+        li{
+            float: left;
+            height: 80px;
+            line-height: 80px;
+        }
+    } 
+}
+ul.options{
+    li{
+        height: 60px;
+        font-size: 14px;
+        line-height: 60px;
+    }
+    b.coin{
+        margin-top:-3px;
+        margin-right: 5px;
+    }
+    li.delsome{
+     span{
+            padding-left:15px;
+            line-height:60px;
+            display:inline-block;
+            cursor:pointer;  
+        }
+        span:hover{
+            color:#3fb88b;
+        }
+    }
+    li.allMoney{
+        margin-left:750px;
+        width: 146px;
+        span{
+            font-size: 20px;
+            color:#e5383c;
+        }
+        i{
+            color: #969696;
+        }
+    }
+    li.order{
+        width:118px;
+        button{
+            display: block;
+            width: 80%;
+            background: #f2901d;
+            border: 0;
+            border-radius:5px;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #fff;
+            line-height: 2.5;
+            cursor:pointer;
+        }
+    }
+} 
+li.b{
+    width: 80px;
+}
+li.prodInfo{
+    width: 300px;
+    img{
+        width: 52px;
+        height: 52px;
+        margin: 10px 8px 0 0 ;
+        float: left;
+    }
+    p{
+        width: 240px;
+        margin-top: 10px;
+        line-height: 1.6;
+        float: left;
+    }
+}
+li.color{
+    width: 160px;
+    p{
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+li.price{
+    width: 160px;
+    p{
+        text-align: center;
+    }
+} 
+li.number{
+    width: 160px;
+    p{
+        text-align: center;
+    }
+    b{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #e6e6e6;
+        line-height: 20px;
+        text-align: center;
+        background: url(../img/coins.png) no-repeat;
+        margin: 0 -2px;
+        position: relative;
+        top: 7px;
+    }
+    b.plus{
+        background-position: -175px -217px;
+    }
+    b.minus{
+        background-position: -106px -217px;
+    }
+    b.disabled{
+        background-position-y: -237px ;
+    }
+    input{
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        padding: 0;
+        border: 0 none;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0 -2px;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+    }
+}
+//.oldie li.number input{
+//  
+//}
+li.money{
+    width: 160px;
+    p{
+        text-align: center;
+    }
+}
+li.option{
+    width: 175px;
+    p{
+        text-align: center;
+        span{
+            display: inline-block;
+            padding: 0 10px;
+            margin-top: 22px;
+            cursor: pointer;
+            line-height: 2;
+        }
+        span:hover{
+            background: #F2901D;
+            color: #fff;
+            border-radius: 3px;
+            padding: 0 10px;
+        }
+    }
+}
+//购物车空的时候的css
+.prod .kong{
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    padding: 20px 0;
+    font-size: 16px;
+    a{
+        display: inline-block;
+        padding: 0 10px;
+        line-height: 2.4;
+    }
+}
+ul.child{
+    clear: both;
+}
+ul.chids:last-child li{
+    border-bottom: 0;
+}
+.child{
+    li{
+        float: left;
+        height: 36px;
+        padding-bottom:5px ;
+        border-bottom: 1px solid #dfdfdf;
+        text-align: center;
+        p{
+            margin: 0;
+        }
+    }
+    li.no{
+        margin-left: 104px;
+        width: 36px;
+        height: 36px;
+        i{
+            display: block;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            border: 1px solid #dfdfdf;
+            border-radius: 50px;
+//          font-style: normal;
+//          vertical-align: middle;
+            margin: 9px auto 0;
+        }
+    }
+    li.name{
+        border-bottom: 1px solid #dfdfdf;
+        width: 240px;
+        p{
+            line-height: 35px;
+        }
+    }
+    li.color{
+        //border-bottom: 1px solid #dfdfdf;
+        width:160px;
+        text-align:center;
+        select{
+           width:80px;
+            border-radius:0;
+            margin:7px 0 0 0;
+            height:26px;
+            line-height:26px; 
+        }
+    }
+    li.price{
+        //border-bottom:1px solid #dfdfdf;
+        width: 160px;
+        text-align: center;
+        p{
+            line-height: 35px;
+        }
+    }
+    li.number{
+        width: 160px;
+        p{
+            margin-top:9px;
+        }
+        b{
+            width:20px;
+            height:20px;
+            border:1px solid #e6e6e6;
+            display:inline-block;
+            line-height:20px;
+            vertical-align:middle;
+            text-align:center;
+            background:url(../images/coins/coins.png) no-repeat;
+            margin:0 -2px;  
+        }
+        b.plus{
+            background-position: -175px -217px;
+        }
+        b.minus{
+            background-position: -106px -217px;
+        }
+        b.disabled{
+            background-position-y: -237px;
+        }
+        input{
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            padding: 0;
+            border: 0 none;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 -2px;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+        }
+    }
+    li.money{
+        width: 160px;
+        p{
+          text-align: center;
+        }
+    }
+    li.option{
+        width: 175px;
+        p{
+            line-height:35px;
+            //text-align: center;
+//          span{
+//              display: inline-block;
+//              padding: 0 10px;
+//              margin-top: 22px;
+//              cursor: pointer;
+//              line-height: 2;
+//          }
+//          span:hover{
+//              background: #F2901D;
+//              color: #fff;
+//              border-radius: 3px;
+//              padding: 0 10px;
+//          }
+        }
+    }
+}
+.delsome span{
+    cursor: pointer;
+}
+/* 覆盖样式 */
 body{
     background: #f5f5f5;
 }
+

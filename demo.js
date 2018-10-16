@@ -10,7 +10,44 @@
         }
         window.wxc.xcConfirm(txt, "custom", option);
     });
-    
+
+       //腾讯验证码
+        window.callback = function(res){
+            var username = $('input[name=username]').val();
+            var pwd = $('input[name=password]').val();
+            if (username.length == '') {
+                $('.tips').text('请输入登录账号');
+                return false;
+            }
+            if (pwd.length == '') {
+                $('.tips').text('请输入登录密码');
+                return false;
+            }
+
+            if(res.ret === 0){
+                //验证票据
+                var ticket =res.ticket
+                var randstr =res.randstr
+                var sendData={'username': username, 'password': pwd, 'ticket': ticket, 'randstr': randstr};
+                $.post('/Users/dologin', sendData, function (d) {
+                    var data = JSON.parse(d);
+                    if (data['status'] == -5) {
+                        $('.tips').text('验证码错误');
+                    } else if (data['status'] == -3) {
+                        $('.tips').text('账号被锁,请联系客服');
+                    } else if (data['status'] == -2) {
+                        $('.tips').text('非法请求');
+                    } else if (data['status'] == -1) {
+                        $('.tips').text('未知错误,请联系客服');
+                    } else if (data['status'] == 0) {
+                        $('.tips').text('账号或密码错误');
+                    } else {
+                        location.href = data.refer;
+                    }
+                });
+            }
+        }
+   
 
 
 // 快捷栏目
