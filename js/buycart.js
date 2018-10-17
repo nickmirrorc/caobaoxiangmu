@@ -143,6 +143,35 @@ $('.prod .number').on('change','input',function(){
 	})
 });
 //删除单个商品
+$('.prod .option').on('click','.del span',function(){
+	var txt="确定要删除该商品吗？";
+	var _this=$(this);
+	var id = _this.parents('ul').attr('data-id');
+	var _thisCar=_this.parents(".cartList");
+	var option={
+		title:"提示",
+		btn: pardeInt('0011',2),
+		onOk:function(){
+			$.post('/buy/deleteCat',{'id':id},function(a){
+				$('[data-id='+id+']').remove();
+				var ullen=$('.prod [data-id]').length;
+				var PartAllLen=_thisCar.find('ul').length;
+				countPrice();
+				if(ullen==0){
+					$('.prod ul:not(.options)').remove();
+					$('.prod .options').before('<div class="kong">购物车空了！去挑选点什么吧！<a href="../html/product.html">走起！</a></div>');
+					$('.prod .b b.all').removeClass('ok');
+					$('.prod .order button').prop('disabled',true).addClass('disabled');
+				}
+				if(PartAllLen==0){
+					_thisCar.find('.shop-tit').remove();
+				}
+				$('.prod .allMoney span').text('0.00');
+			});
+		}
+	}
+	window.wxc.xcConfirm(txt,'custom',option);
+});
 //批量删除商品
 function deleteBatchCat(){
 	var txt="确认删除这些商品吗？"
@@ -150,15 +179,36 @@ function deleteBatchCat(){
 	var oklen=okli.length;
 	var option={
 		title:"提示",
-		bin:parseInt('0011',2),
-		onOk:funtion(){
+		btn:parseInt('0011',2),
+		onOk: function(){
 			if(oklen==0){
 				var txt="手下留情，在调戏，购物车就空了 ！";
 				window.wxc.xcConfirm(txt,window.wxc.xcConfirm.typeEnum.info);
-//				
+				$('.prod .b b.all').removeClass('ok');
+				$('.prod .allMoney span').text('0.00');
+				$('.options .order button').prop('disabled',true).addClass('disabled');
+				return false;
 			}
+			var ids=new Array();
+			for(var i=0;i<oklen;i++){
+				ids[i]=$(okli[i]).parents('ul').attr('data-id');
+			}
+			$.post('/buy/deleteBatchCat',{'ids':ids},function(a){
+				$(okli).parents('ul').remove();
+				var ullen=$('.prod [data-id]').length;
+				countPrice();
+				if(ullen==0){
+					$('.prod li:not(.options)').remove();
+					$('.prod .shop-tit').remove();
+					$('.prod .options').before('<div class="kong">购物车空了，去挑选点什么吧！<a href="../html/product.html">走起!</a></div>');
+					$('.prod .b b.all').removeClass('ok');
+					$('.prod .order button').prop('disabled',true).addClass('disabled');
+				}
+				$('.prod .allMoney span').text('0.00');
+			})
 		}
 	}
+	window.wxc.xcConfirm(txt,'custom',option);
 }
 //计算总金额
 function countPrice(){
@@ -177,3 +227,8 @@ function countPrice(){
 		$('.prod .allMoney span').text(parseFloat(msg).toFixed(2));
 	})
 }
+//Buy/changeNumber
+//buy/deleteCat
+//buy/deleteBatchCat
+//buy/totalAmount
+//window.wxc.xcConfirm(txt, "custom", option);

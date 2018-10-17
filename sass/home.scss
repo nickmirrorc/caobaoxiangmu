@@ -3,3 +3,21 @@
 @import "header";
 @import "homecon";
 @import "footer";
+.frdLink{
+    background: #fff;
+    margin-top: 15px;
+    .frdLink_f{
+        border-top: 1px solid #ccc;
+        line-height: 24px;
+        padding: 15px;
+        a{
+            display: inline-block;
+            padding: 0 5px;
+            font-size: 12px;
+            line-height: inherit;
+        }
+        a:hover{
+            color:#40bb8c;
+        }
+    }
+} 

@@ -31,12 +31,11 @@ gulp.task("sass",function(){
 	.pipe(sass())
 	.pipe(gulp.dest(basepath+"\\css"));
 });
-//gulp.task("sass",function(){
-//	gulp.src("sass/sidebar.scss")
-//	.pipe(sass())
-//	.pipe(gulp.dest(basepath+"\\css"));
-//});
-gulp.task("build",["copy-html","copy-img","sass","copy-js","copy-users"],function(){
+gulp.task("copy-product",function(){
+	gulp.src("product/**/*")
+	.pipe(gulp.dest(basepath+"\\product"));
+});
+gulp.task("build",["copy-html","copy-img","sass","copy-js","copy-users","copy-product"],function(){
 	console.log("ok le");
 });
 //监听
@@ -46,5 +45,6 @@ gulp.task("watchall",function(){
 	gulp.watch("img/**/*",["copy-img"]);
 	gulp.watch("js/**/*",["copy-js"]);
 	gulp.watch("sass/*.scss",["sass"]);
-	gulp.watch("users/**/*",["copy-users"])
+	gulp.watch("users/**/*",["copy-users"]);
+	gulp.watch("product/**/*",["copy-product"])
 });

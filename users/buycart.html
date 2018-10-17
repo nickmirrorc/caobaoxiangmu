@@ -5,6 +5,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/buycart.css" />
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="../css/xcConfirm.css"/>
 	</head>
 	<body>
 <!-- 头部部分  开始    -->
@@ -145,7 +146,7 @@
 					全选
 				</li>
 				<li class="delsome">
-					<span>删除已选商品</span>
+					<span onclick="deleteBatchCat()">删除已选商品</span>
 				</li>
 				<li class="allMoney">
 					总计：
@@ -299,11 +300,31 @@
 		</a>
 	</div>
 </div>
-
 <!--侧边栏部分 结束 -->
+<!--xcConfirm弹出窗-->
+<!--<div class="xcConfirm" id="pop_153974457192720350">
+	<div class="xc_layer"></div>
+	<div class="popBox">
+		<div class="ttBox">
+			<a class="clsBtn"></a>
+			<span class="tt">提示</span>
+		</div>
+		<div class="txtBox">
+			<div class="bigIcon" style="background-position:-28px -28px;"></div>
+			<p>确认删除这些商品吗？</p>
+		</div>
+		<div class="btnArea">
+			<div class="btnGroup">
+				<a class="sgBtn ok">确定</a>
+				<a class="sgBtn cancel">取消</a>
+			</div>
+		</div>
+	</div>
+</div>-->
 	</body>
 </html>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="../js/xcConfirm.js" ></script>
 <script type="text/javascript" src="../js/buycart.js" ></script>
 <script type="text/javascript" src="../js/sidebar.js" ></script>
 <script type="text/javascript">
@@ -323,7 +344,7 @@ $("#pay").click(function(){
 	for(var i=0;i<ckdlen;i++){
 		if((i+1)==ckdlen){
 			if(ids=='' || ids==null){
-				ids = $(cheched[i]).attr('data-id');
+				ids = $(checked[i]).attr('data-id');
 			}else{
 				ids=ids+$(checked[i]).attr('data-id');
 			}
