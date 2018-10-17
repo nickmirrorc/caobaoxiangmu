@@ -31,11 +31,14 @@
 }
 .tabnav .ulone{
     height: 44px;
+    .line{
+        color: #cdcdcd;
+    }
 }
 .tabnav .ulone .l{
     padding: 0 10px;
-    
 }
+
 /*--------------header_btm*/
 .header_btm{
     border-top: 1px solid #ccc;
