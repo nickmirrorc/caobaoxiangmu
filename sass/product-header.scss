@@ -28,18 +28,23 @@ li{
     font-size: 12px;
     margin:0 5px;
 }
+
 .header_top_r{
     display: inline-block;
     height: 44px;
-}
-.header_top_r .ulone{
-    height: 44px;
-    .l{
-        padding: 0 10px;
+    .ulone{
+        height: 44px;
+        li{
+            padding: 0 10px;
+            line-height: 44px;
+            a{
+                display: inline-block;
+            }
+        }
+        li.line{
+            color: #cdcdcd;
+        } 
     }
-    .line{
-        color: #cdcdcd;
-    } 
 }
 .header_btm{
     margin:14px 0 12px 0;
@@ -270,16 +275,23 @@ li{
             border-left: 1px solid #e5e5e5;
             border-right:1px solid #e5e5e5;
             border-top: 3px solid #40bb8c;
+            border-bottom: 2px solid #fff;
+            margin-top: -3px;
         }
     }
 }
+.new_pro_list.current{
+    display: block;
+}
 .new_pro_list{
     border: 1px solid #e5e5e5;
+    display: none;
     li{
-        width: 178px;
+        width: 199px;
         float: left;
         overflow: hidden;
-        margin:10px;
+        margin:10px 0;
+        padding: 0 10px;
         border-right:1px solid #efefef ;
         text-align: center;
         .tit{
@@ -301,36 +313,216 @@ li{
             } 
         }
         .pic{
-                width: 160px;
-                height: 160px;
-                transition: all 1s ease;
-                display: inline-block;
-                a{
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    img{
-                    width: 100%;
-                    height: 100%;
+            width: 160px;
+            height: 160px;
+            display: inline-block;
+            overflow: hidden;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                img{
+                    display: inline-block;
+                    width:160px;
+                    transition: all 1s ease;
                 }
-                }
-                
+            }
         } 
+        .pic:hover a img:hover{
+            transform:scale(1.2);
+        }
     }
 }
-
-//         
-//          .store_goods_img{
-//              width: 140px;
-//              height: 140px;
-//              transition: all .5s;
-//              display: inline-block;
-//              img{
-//                  width: 100%;
-//                  height: 100%;
-//              }
-//          }
-//      }
-        .store_goods_block:hover .store_goods_img{
-            transform: scale(1.2);
+/*-----内配Internal--------*/
+.bd_b{
+    border-bottom: 1px solid #f5f5f5;
+}
+.bd_r{
+    border-right:1px solid #f5f5f5;
+}
+.common{
+.floor_tit{
+    //height: 64px;
+    margin:33px 0 5px;
+    h2{
+        height: 26px;
+        line-height: 26px;
+        font-size: 20px;
+        color: #898989;
+        font-weight: bold;
+        float: left;
+        border-left: 3px solid #ffff00;
+        a{
+            padding-left: 10px;
+            cursor: pointer;
         }
+    }
+    .more{
+        float: right;
+        margin-right: 16px;
+        font-size: 14px;
+        a{
+            color: #000;
+            padding-left: 20px;
+        }
+        .more_a{
+            color: #b5b5b5;
+            .icon-arrow{
+                display: inline-block;
+                width: 12px;
+                height: 13px;
+                background: url(../img/icon.png) -78px -509px;
+            }
+        }
+    }
+}
+.common_con{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    .recommend{
+        width: 231px;
+        float: left;
+        border:1px solid #eee;
+        .pic{
+            width: 100%;
+            text-align: center;
+            a{
+                img{
+                    display: inline-block;
+                    width: 231px;
+                    cursor: pointer;
+                    vertical-align: middle;
+                }
+            }   
+        }
+        
+    }
+    .figure_hot{
+        float: right;
+        width: 960px;
+        height: auto;
+        border: 1px solid #e6e6e6;
+        margin-top: 2px;
+        .figure_left{
+            float: left;
+            width: 578px;
+            ul{
+                li{
+                    float: left;
+                    height: 286px;
+                    position: relative;
+                    cursor: pointer;
+                }
+                li.main{
+                    width: 384px;
+                    img{
+                        position: absolute;
+                        width: 240px;
+                        height: 240px;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    .txt{
+                        padding-left: 180px;
+                        margin-top: 20px;
+                        text-align: center;
+                        line-height: 26px;
+                        .tit{
+                            font-size: 16px;
+                            color: #6a6a6a;
+                            height: 26px;
+                            line-height: 26px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .money{
+                            color: #fe645a;
+                            font-size: 22px;
+                            line-height: 1.6;
+                            span{
+                                font-size: 16px;
+                                color: #fe645a;
+                            }
+                        }
+                    }
+                }
+                li.sw{
+                    width: 192px;
+                    img{
+                        width: 160px;
+                        height: 160px;
+                        margin: 34px auto;
+                        display: block;
+                    }
+                    .txt{
+                        text-align: center;
+                        line-height: 26px;
+                        .tit{
+                            width: 160px;
+                            margin:0 auto;
+                            font-size: 16px;
+                            color: #333;
+                            height: 26px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .money{
+                            color: #fe645a;
+                            font-size: 20px;
+                            span{
+                                font-size: 16px;
+                                color: #fe645a;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .figure_right{
+            float: left;
+            width: 379px;
+            ul{
+                li{
+                    width: 380px;
+                    height: 142px;
+                    cursor: pointer;
+                    img{
+                        width: 120px;
+                        height: 120px;
+                        float: left;
+                        padding:11px 0 0 50px;
+                        vertical-align: middle;
+                    }
+                    .txt{
+                        float: left;
+                        width: 180px;
+                        padding-top: 30px;
+                        text-align: center;
+                        line-height: 36px;
+                        .tit{
+                            color: #535353;
+                            line-height: 26px;
+                            max-height: 72px;
+                            overflow: hidden;
+                        }
+                        .money{
+                            font-size: 20px;
+                            color: #f44;
+                            span{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+}
+
+/*-----外配External--------*/
+/*-----工具Tool--------*/

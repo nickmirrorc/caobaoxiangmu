@@ -8,6 +8,10 @@ let basepath = "D:\\phpStudy\\WWW\\caomao";
 //定义一个复制文件的任务
 //task函数的第一个参数：copyHtml是任务名
 //task函数的第二个参数function是任务copyHtml对应的功能
+gulp.task("copy-goods",function(){
+	gulp.src("goods/**/*")
+	.pipe(gulp.dest(basepath+"\\goods"));
+})
 gulp.task("copy-html",function(){
 	gulp.src("*.html")
 	.pipe(gulp.dest(basepath)),
@@ -35,7 +39,7 @@ gulp.task("copy-product",function(){
 	gulp.src("product/**/*")
 	.pipe(gulp.dest(basepath+"\\product"));
 });
-gulp.task("build",["copy-html","copy-img","sass","copy-js","copy-users","copy-product"],function(){
+gulp.task("build",["copy-html","copy-img","sass","copy-js","copy-users","copy-product","copy-goods"],function(){
 	console.log("ok le");
 });
 //监听
@@ -46,5 +50,6 @@ gulp.task("watchall",function(){
 	gulp.watch("js/**/*",["copy-js"]);
 	gulp.watch("sass/*.scss",["sass"]);
 	gulp.watch("users/**/*",["copy-users"]);
-	gulp.watch("product/**/*",["copy-product"])
+	gulp.watch("product/**/*",["copy-product"]);
+	gulp.watch("goods/**/*",["copy-goods"]);
 });
